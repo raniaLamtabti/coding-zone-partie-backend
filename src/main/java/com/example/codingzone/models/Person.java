@@ -1,13 +1,10 @@
 package com.example.codingzone.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.UUID;
 
-@ToString @AllArgsConstructor
+@ToString
 public class Person {
         @Getter private String id;
         @Getter @Setter
@@ -18,8 +15,15 @@ public class Person {
         private String email;
 
         public Person() {
-                this.id = UUID.randomUUID().toString();
+            this.id = UUID.randomUUID().toString();
         }
+        public Person(String firstName, String lastName, String email) {
+                this.id = UUID.randomUUID().toString();
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email;
+        }
+
 
 
 }

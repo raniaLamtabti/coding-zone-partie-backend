@@ -1,14 +1,49 @@
 package com.example.codingzone.models;
 
-import lombok.AllArgsConstructor;
-import lombok.ToString;
 
-@AllArgsConstructor @ToString
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.UUID;
+
 public class Stuff extends Person{
-    private String password;
 
-    public Stuff(String id ,String firstName, String lastName, String email, String password) {
-        super(id,firstName, lastName, email);
-        this.password = password;
-    }
+
+  @Getter @Setter
+  private String password;
+  @Getter @Setter
+  private Role role;
+
+  public Stuff() {
+    super();
+  }
+
+  public Stuff(String firstName, String lastName, String email, String password, Role role) {
+    super(firstName, lastName, email);
+    this.password = password;
+    this.role = role;
+  }
+
+
+
+  // tostring method
+  @Override
+  public String toString() {
+    return "Stuff{" +
+            "id=" + getId() +
+            ", firstName='" + getFirstName() + '\'' +
+            ", lastName='" + getLastName() + '\'' +
+            ", email='" + getEmail() + '\'' +
+            ", password='" + getPassword() + '\'' +
+            ", role=" + getRole() +
+            '}';
+  }
+
+
+
+
 }
+
+
+
+
