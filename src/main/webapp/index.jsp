@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <title>JSP - Hello World</title>
 </head>
@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Login</a>
+<a href="login-servlet">Login</a>
 </body>
 </html>

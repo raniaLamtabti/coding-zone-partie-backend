@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @ToString
 public class Person {
-        @Getter private String id;
+        @Getter @Setter private String id;
         @Getter @Setter
         private String firstName;
         @Getter @Setter

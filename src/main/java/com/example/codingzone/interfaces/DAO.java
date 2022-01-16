@@ -3,6 +3,7 @@ package com.example.codingzone.interfaces;
 import com.example.codingzone.config.Config;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public interface DAO<T> {
 
@@ -12,4 +13,10 @@ public interface DAO<T> {
     public  T create(T obj);
     public  T update(T obj);
     public  void delete(T obj);
+
+    T login(String email, String password) throws SQLException;
+
+
+
+
 }

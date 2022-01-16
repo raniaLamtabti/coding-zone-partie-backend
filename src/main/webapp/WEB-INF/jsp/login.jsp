@@ -12,6 +12,13 @@
 </head>
 <body>
 <h1>Login</h1>
+<h1>
+    ${email} <br>
+    ${password} <br>
+    ${empty email ? "Email is required" : ""} <br>
+    ${empty password ? "Password is required" : ""}
+
+</h1>
 <form action="#" method="post">
     <table>
         <tr>
@@ -27,6 +34,7 @@
             <td><input type="submit" value="Login"/></td>
         </tr>
     </table>
+</form>
 
 </body>
 </html>

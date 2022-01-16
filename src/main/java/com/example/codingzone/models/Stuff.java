@@ -35,7 +35,7 @@ public class Stuff extends Person{
             ", lastName='" + getLastName() + '\'' +
             ", email='" + getEmail() + '\'' +
             ", password='" + getPassword() + '\'' +
-            ", role=" + getRoleId() +
+            ", role id=" + getRoleId() +
             '}';
   }
 

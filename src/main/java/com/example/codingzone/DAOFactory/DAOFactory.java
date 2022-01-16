@@ -6,6 +6,7 @@ import com.example.codingzone.models.Stuff;
 
 public class DAOFactory {
 
+
     // stuff =================================
     public static DAO<Stuff> getStuffImpl() {
         return new StuffImpl();
