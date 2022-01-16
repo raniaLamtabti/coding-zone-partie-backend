@@ -17,19 +17,19 @@ public class Question {
   @Getter @Setter
   private int score;
   @Getter @Setter
-  private Test test;
+  private String testId;
 
 
   public Question() {
     this.id = UUID.randomUUID().toString();
   }
 
-  public Question(String name, int timeToLive, int score, Test test) {
+  public Question(String name, int timeToLive, int score, String testId) {
     this.id = UUID.randomUUID().toString();
     this.name = name;
     this.timeToLive = timeToLive;
     this.score = score;
-    this.test = test;
+    this.testId = testId;
   }
 }
 

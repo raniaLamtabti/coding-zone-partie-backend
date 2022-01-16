@@ -12,16 +12,16 @@ public class Stuff extends Person{
   @Getter @Setter
   private String password;
   @Getter @Setter
-  private Role role;
+  private String roleId;
 
   public Stuff() {
     super();
   }
 
-  public Stuff(String firstName, String lastName, String email, String password, Role role) {
+  public Stuff(String firstName, String lastName, String email, String password, String roleId) {
     super(firstName, lastName, email);
     this.password = password;
-    this.role = role;
+    this.roleId = roleId;
   }
 
 
@@ -35,7 +35,7 @@ public class Stuff extends Person{
             ", lastName='" + getLastName() + '\'' +
             ", email='" + getEmail() + '\'' +
             ", password='" + getPassword() + '\'' +
-            ", role=" + getRole() +
+            ", role=" + getRoleId() +
             '}';
   }
 

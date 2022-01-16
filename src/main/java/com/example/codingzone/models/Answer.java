@@ -13,7 +13,7 @@ public class Answer {
   @Getter @Setter
   private String name;
   @Getter @Setter
-  private Question question;
+  private String questionId;
   @Getter @Setter
   private boolean isCorrect;
 
@@ -22,10 +22,10 @@ public class Answer {
     this.id = UUID.randomUUID().toString();
   }
 
-  public Answer(String name, Question question, boolean isCorrect) {
+  public Answer(String name, String questionId, boolean isCorrect) {
     this.id = UUID.randomUUID().toString();
     this.name = name;
-    this.question = question;
+    this.questionId = questionId;
     this.isCorrect = isCorrect;
   }
 

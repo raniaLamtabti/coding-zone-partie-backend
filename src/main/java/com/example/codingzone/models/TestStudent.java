@@ -11,7 +11,7 @@ public class TestStudent {
   @Getter
   private String id;
   @Getter @Setter
-  private Test test;
+  private String testId;
   @Getter @Setter
   private String accessCode;
 
@@ -20,9 +20,9 @@ public class TestStudent {
     this.id = UUID.randomUUID().toString();
   }
 
-  public TestStudent(Test test, String accessCode) {
+  public TestStudent(String testId, String accessCode) {
     this.id = UUID.randomUUID().toString();
-    this.test = test;
+    this.testId = testId;
     this.accessCode = accessCode;
   }
 

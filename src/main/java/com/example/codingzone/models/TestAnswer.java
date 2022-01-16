@@ -11,21 +11,21 @@ public class TestAnswer {
   @Getter
   private String id;
   @Getter @Setter
-  private TestStudent student;
+  private String testStudentId;
   @Getter @Setter
-  private Question question;
+  private String questionId;
   @Getter @Setter
-  private Answer answer;
+  private String answerId;
 
   public TestAnswer(){
     this.id = UUID.randomUUID().toString();
   }
 
 
-  public TestAnswer( TestStudent student, Question question, Answer answer) {
+  public TestAnswer( String testStudentId, String questionId, String answerId) {
     this.id = UUID.randomUUID().toString();
-    this.student = student;
-    this.question = question;
-    this.answer = answer;
+    this.testStudentId = testStudentId;
+    this.questionId = questionId;
+    this.answerId = answerId;
   }
 }
