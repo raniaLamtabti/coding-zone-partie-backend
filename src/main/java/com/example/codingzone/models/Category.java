@@ -1,40 +1,29 @@
 package com.example.codingzone.models;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.util.UUID;
-@ToString
-public class Test {
 
-  @Getter
+@ToString
+public class Category {
+
+  @Getter @Setter
   private String id;
   @Getter @Setter
   private String name;
   @Getter @Setter
-  private int timeToLive;
-  @Getter @Setter
-  private int score;
-  @Getter @Setter
-  private String stuffId;
-  @Getter
-  @Setter
-  private String categoryId;
+  private String description;
 
-  public Test() {
+  public Category() {
     this.id = UUID.randomUUID().toString();
   }
 
-  public Test( String name, String stuffId, String categoryId) {
+  public Category( String name, String description) {
     this.id = UUID.randomUUID().toString();
     this.name = name;
-
-    this.stuffId = stuffId;
-    this.categoryId = categoryId;
+    this.description = description;
   }
-
-
 
 }

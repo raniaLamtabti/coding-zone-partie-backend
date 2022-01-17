@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class StuffImpl implements DAO<Stuff> {
 
@@ -37,6 +38,11 @@ public class StuffImpl implements DAO<Stuff> {
 
     }
 
+
+    @Override
+    public List<Stuff> findAll() {
+        return null;
+    }
 
     @Override
     public Stuff find(long id) {

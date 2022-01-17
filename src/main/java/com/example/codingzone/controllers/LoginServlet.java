@@ -3,6 +3,7 @@ package com.example.codingzone.controllers;
 import com.example.codingzone.DAOFactory.DAOFactory;
 import com.example.codingzone.interfaces.DAO;
 import com.example.codingzone.models.Stuff;
+import com.example.codingzone.models.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -49,9 +50,10 @@ public class LoginServlet extends HttpServlet {
 
             stuff = stuffDAO.login(email, password);
             if (stuff != null) {
-                request.getSession().setAttribute("stuff", stuff);
-                response.setStatus(HttpServletResponse.SC_OK);
-                response.sendRedirect("QuestionServlet");
+                HttpSession session = request.getSession();
+                session.setAttribute("stuff", stuff);
+
+                response.sendRedirect("TestServlet");
             } else {
                 this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
             }
