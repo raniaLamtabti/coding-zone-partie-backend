@@ -5,36 +5,27 @@ import com.example.codingzone.helpers.Queries;
 import com.example.codingzone.interfaces.DAO;
 import com.example.codingzone.models.Stuff;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 
 public class StuffImpl implements DAO<Stuff> {
 
-    Connection conn;
+    Connection conn = Config.getInstance().getConnection();
     Statement stmt;
     ResultSet rs;
+    PreparedStatement pstmt;
 
-    @Override
-    public Stuff login(String email, String password) throws SQLException {
-        Stuff stuff = new Stuff();
-        conn = Config.getInstance().getConnection();
-        stmt = conn.createStatement();
-        String query = Queries.login("stuff",email, password);
-        rs = stmt.executeQuery(query);
-        if (rs.next()) {
-            stuff.setId(String.valueOf(rs.getLong("id")));
-            stuff.setFirstName(rs.getString("firstname"));
-            stuff.setLastName(rs.getString("lastname"));
-            stuff.setEmail(rs.getString("email"));
-            stuff.setPassword(rs.getString("password"));
-            stuff.setRoleId(rs.getString("role_id"));
-            return stuff;
-        } else {
-            return null;
-        }
+
+    public Boolean login(String email, String password)  {
+       try {
+           String query = Queries.login("stuff",email, password);
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            return pstmt.getResultSet().next();
+       } catch (Exception e) {
+           e.printStackTrace();
+           return false;
+       }
 
     }
 

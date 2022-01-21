@@ -16,7 +16,7 @@ public interface DAO<T> {
     public  T update(T obj);
     public  void delete(T obj);
 
-    T login(String email, String password) throws SQLException;
+    //T login(String email, String password) throws SQLException;
 
 
 

@@ -56,8 +56,5 @@ public class CategoryImpl implements DAO<Category> {
 
     }
 
-    @Override
-    public Category login(String email, String password) throws SQLException {
-        return null;
-    }
+
 }

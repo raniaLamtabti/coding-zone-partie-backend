@@ -53,8 +53,5 @@ public class TestImpl implements DAO<Test> {
 
     }
 
-    @Override
-    public Test login(String email, String password) throws SQLException {
-        return null;
-    }
+
 }
