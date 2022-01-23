@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+h1{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  color: $text-color;
+}
+h2{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  color: $text-color;
+}
+h3{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: $text-color;
+}
+h4{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-color;
+}
+h5{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  color: $text-color;
+}
+p{
+  margin: 0;
+  padding: 0;
+}

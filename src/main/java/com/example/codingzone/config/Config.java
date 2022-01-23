@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Config {
-    private static String url = "jdbc:postgresql://localhost:5432/codingzone";
+    private static String url = "jdbc:postgresql://localhost:5432/coding_zone";
     private static String user = "postgres";
     private static String passwd = "root";
     private static Connection connect;

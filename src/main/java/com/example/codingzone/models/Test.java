@@ -1,40 +1,32 @@
 package com.example.codingzone.models;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Date;
 import java.util.UUID;
-@ToString
-public class Test {
 
+@ToString @AllArgsConstructor
+public class Test {
   @Getter
-  private String id;
+  @Setter
+  private long id;
   @Getter @Setter
   private String name;
   @Getter @Setter
-  private int timeToLive;
+  private String description;
   @Getter @Setter
-  private int score;
+  private TestCategory category;
   @Getter @Setter
-  private String stuffId;
-  @Getter
-  @Setter
-  private String categoryId;
+  private Date startTime;
+  @Getter @Setter
+  private Date endTime;
+
 
   public Test() {
-    this.id = UUID.randomUUID().toString();
+    this.id = UUID.randomUUID().getMostSignificantBits();
   }
-
-  public Test( String name, String stuffId, String categoryId) {
-    this.id = UUID.randomUUID().toString();
-    this.name = name;
-
-    this.stuffId = stuffId;
-    this.categoryId = categoryId;
-  }
-
-
 
 }

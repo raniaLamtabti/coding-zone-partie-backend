@@ -1,30 +1,29 @@
 package com.example.codingzone.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
-import java.io.Serializable;
+import java.util.UUID;
 
-
-public class Student extends Person  {
-
+@ToString @AllArgsConstructor
+public class Student {
+  @Getter
+  @Setter
+  private long id;
+  @Getter @Setter
+  private String firstName;
+  @Getter @Setter
+  private String lastName;
+  @Getter @Setter
+  private String email;
 
   public Student() {
-    super();
+    this.id = UUID.randomUUID().getMostSignificantBits();
   }
 
-   public Student( String firstName, String lastName, String email) {
-    super(firstName, lastName, email);
-  }
 
-  @Override
-  public String toString() {
-    return "Student{" +
-            "id=" + getId() +
-            ", firstName='" + getFirstName() + '\'' +
-            ", lastName='" + getLastName() + '\'' +
-            ", email='" + getEmail() + '\'' +
-            '}';
-  }
+
 
 }

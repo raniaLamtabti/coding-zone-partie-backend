@@ -1,49 +1,36 @@
 package com.example.codingzone.models;
 
-
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.UUID;
 
-public class Stuff extends Person{
-
-
+@ToString
+public class Stuff {
+  @Getter
+  @Setter
+  private long id;
+  @Getter @Setter
+  private String name;
+  @Getter @Setter
+  private String email;
   @Getter @Setter
   private String password;
   @Getter @Setter
-  private String roleId;
+  private String description;
+
 
   public Stuff() {
-    super();
+    this.id = UUID.randomUUID().getMostSignificantBits();
   }
 
-  public Stuff(String firstName, String lastName, String email, String password, String roleId) {
-    super(firstName, lastName, email);
+  public Stuff(String name, String email, String password, String description) {
+    this.id = UUID.randomUUID().getMostSignificantBits();
+    this.name = name;
+    this.email = email;
     this.password = password;
-    this.roleId = roleId;
+    this.description = description;
   }
-
-
-
-  // tostring method
-  @Override
-  public String toString() {
-    return "Stuff{" +
-            "id=" + getId() +
-            ", firstName='" + getFirstName() + '\'' +
-            ", lastName='" + getLastName() + '\'' +
-            ", email='" + getEmail() + '\'' +
-            ", password='" + getPassword() + '\'' +
-            ", role id=" + getRoleId() +
-            '}';
-  }
-
-
-
 
 }
-
-
-
-

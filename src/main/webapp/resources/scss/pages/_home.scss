@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+body {
+  background-color: $background-color;
+  display: flex;
+  margin: 0;
+
+  main {
+    height: 100vh;
+    width: calc(100% - $sidebar-width);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    .container {
+
+      p {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: $text-color;
+        opacity: 0.4;
+        width: 50%;
+      }
+
+      .cards {
+        @include flex(row, center, center, nowrap);
+        gap: 20px;
+        width: 100%;
+
+        .card:nth-child(1) {
+          @include card($primary-green, $light-green);
+
+        }
+
+        .card:nth-child(2) {
+          @include card($primary-yellow, $light-yellow);
+
+        }
+
+        .card:nth-child(3) {
+          @include card($primary-purple, $light-purple);
+
+        }
+      }
+
+      .tests_table {
+        .header {
+          background-color: $primary-purple;
+          @include flex(row, space-between, center, nowrap);
+          height: 50px;
+          border-radius: 10px;
+          padding: 0 40px;
+          margin: 15px 0;
+
+          h3 {
+            color: #fff;
+            width: 19%;
+            text-align: center;
+          }
+
+          h3:nth-child(6) {
+            width: 5%;
+          }
+
+
+        }
+
+        .tests {
+          @include flex(column, flex-start, center, nowrap);
+          .test {
+            @include flex(row, space-between, center, nowrap);
+            height: 60px;
+            min-height: 60px;
+            border-radius: 10px;
+            padding: 0 40px;
+            margin-bottom: 15px;
+            background-color: white;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+            .col {
+              width: 19%;
+              text-align: center;
+            }
+
+            h3:nth-child(5) {
+              color: $primary-purple;
+            }
+
+            .col:nth-child(6) {
+              width: 5%;
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+  }}

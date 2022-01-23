@@ -1,30 +1,32 @@
 package com.example.codingzone.models;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.util.UUID;
-@ToString
-public class TestStudent {
-  @Getter
-  private String id;
-  @Getter @Setter
-  private String testId;
-  @Getter @Setter
-  private String accessCode;
 
+@ToString @AllArgsConstructor
+public class TestStudent {
+  @Getter @Setter
+  private long id;
+  @Getter @Setter
+  private Test test;
+  @Getter @Setter
+  private Student student;
+  @Getter @Setter
+  private String accessToken;
+  @Getter @Setter
+  private boolean isTake;
 
   public TestStudent() {
-    this.id = UUID.randomUUID().toString();
+    this.isTake = false;
+    this.id = UUID.randomUUID().getMostSignificantBits();
   }
 
-  public TestStudent(String testId, String accessCode) {
-    this.id = UUID.randomUUID().toString();
-    this.testId = testId;
-    this.accessCode = accessCode;
-  }
+
+
 
 
 }

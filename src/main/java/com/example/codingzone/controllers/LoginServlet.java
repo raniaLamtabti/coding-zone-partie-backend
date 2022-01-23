@@ -1,39 +1,37 @@
 package com.example.codingzone.controllers;
 
-import com.example.codingzone.DAOFactory.DAOFactory;
+import com.example.codingzone.DAO.DAOFactory;
 
-import javax.servlet.ServletException;
+import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", value = "/login-servlet")
+@WebServlet(name = "login", value = "/login")
 public class LoginServlet extends HttpServlet {
-
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        try {
-            this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
-        } catch (Exception e) {
-            e.printStackTrace();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getSession().getAttribute("user") != null) {
+            response.sendRedirect("DashboardServlet");
+        } else {
+            request.getRequestDispatcher("/views/login.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (DAOFactory.getStuffImpl().login(email, password)) {
+        if (DAOFactory.getStuffImpl().login(username, password)) {
             HttpSession session = request.getSession();
-            session.setAttribute("email", email);
-            session.setAttribute("password", password);
-            response.sendRedirect("/codingzone_war/TestServlet");
+            session.setAttribute("user", username);
+            response.sendRedirect("DashboardServlet");
         } else {
-            response.sendRedirect("/codingzone_war/login-servlet");
-        }
+            request.setAttribute("error", "Invalid username or password");
+            request.getRequestDispatcher("/views/login.jsp").forward(request, response);
 
+        }
 
     }
 }
