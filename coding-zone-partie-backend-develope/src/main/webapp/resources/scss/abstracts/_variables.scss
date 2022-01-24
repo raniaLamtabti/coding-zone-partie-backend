@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+$font-family:  'DM Sans', sans-serif !default;
+
+
+// primary color
+$primary-red: #FF3A29 !default;
+$primary-blue: #02A0FC !default;
+$primary-purple: #4339F2 !default;
+$primary-green: #34B53A !default;
+$primary-yellow: #FFB200 !default;
+$background-color: #F8F8F8 !default;
+$black: rgb(0, 0, 0) !default;
+$white: #FFFFFF !default;
+
+// light colors
+$light-red: #FFE5D3 !default;
+$light-blue: #CCF8FE !default;
+$light-purple: rgba(67, 57, 242, 0.2) !default;
+$light-green: #E2FBD7 !default;
+$light-yellow: #FFF5CC !default;
+
+
+/// Copy text color
+/// @type Color
+$text-color: $black !default;
+$secondary-text-color: $primary-purple !default;
+$secondary-light-text-color: #4339F234 !default;
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+// sidebar
+$sidebar-width: 250px !default;
+$sidebar-background-color: #fff !default;

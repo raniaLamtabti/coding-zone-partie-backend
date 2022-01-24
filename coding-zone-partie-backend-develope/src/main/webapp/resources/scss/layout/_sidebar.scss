@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+aside{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $sidebar-width;
+  background: $sidebar-background-color;
+  @include flex(column,space-between, center,nowrap);
+  padding-bottom: 50px;
+  border-radius: 0 20px 20px 0;
+  .aside_container{
+    padding-top: 20px;
+    width: 100%;
+    .logo{
+      @include flex(column,center,center,nowrap);
+      img{
+        width: 100%;
+      }
+    }
+    hr{
+      border-top: 1px solid $black;
+      opacity: 0.2;
+      width: 225px;
+    }
+    .menu{
+      ul{
+        margin-top: 10px;
+        li{
+          margin-bottom: 10px;
+          a{
+            @include flex(row,flex-start,center,nowrap);
+            height: 60px;
+            padding-left: 35px;
+            transition: 0.3s;
+
+            span{
+              transition: 0.3s;
+              color: $secondary-light-text-color;
+              margin-left: 10px;
+
+            }
+
+          }
+
+          }
+        }
+      }
+
+    }
+  .logout{
+    @include flex(row,flex-start,center,nowrap);
+    width: 100%;
+
+    .sidebar-link{
+      @include flex(row,center,center,nowrap);
+      height: 60px;
+      padding-left: 35px;
+      transition: 0.3s;
+      span{
+        transition: 0.3s;
+        color: $primary-red;
+        margin-left: 10px;
+      }
+    }
+  }
+  }
+
