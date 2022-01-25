@@ -1,0 +1,113 @@
+.testQuestAdd {
+    form {
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: 20px;
+        margin: 25px 0;
+        width: 100%;
+        padding: 25px 100px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        .top {
+            @include flex(row, space-between, flex-start, nowrap);
+            gap: 20px;
+            .form-group {
+                width: 100%;
+                height: 40px;
+                border: 2px solid $light-purple;
+                border-radius: 5px;
+                position: relative;
+                .form-control {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding-left: 10px;
+                }
+                label {
+                    position: absolute;
+                    top: -10px;
+                    left: 10px;
+                    background-color: $white;
+                    color: $primary-purple;
+                }
+            }
+            .right {
+                width: 100%;
+                @include flex(column, space-between, flex-start, nowrap);
+                gap: 20px;
+                .right-bottom {
+                    @include flex(row, space-between, center, nowrap);
+                    width: 100%;
+                    gap: 20px;
+                }
+            }
+            .left {
+                width: 100%;
+                height: 95px;
+                padding-top: 10px;
+            }
+        }
+        .bottom {
+            margin: 30px 0;
+            .options {
+                margin-top: 15px;
+                @include flex(column, space-between, flex-start, nowrap);
+                gap: 20px;
+                .form-group {
+                    width: 100%;
+                    @include flex(row, space-between, center, nowrap);
+                    gap: 10px;
+                    .optionBtn {
+                        height: 20px;
+                        width: 20px;
+                        &::after {
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 15px;
+                            top: -2px;
+                            left: -1px;
+                            position: relative;
+                            background-color: $white;
+                            content: '';
+                            display: inline-block;
+                            visibility: visible;
+                            border: 3px solid $light-purple;
+                        }
+                        &:checked {
+                            &:after {
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 15px;
+                                top: -2px;
+                                left: -1px;
+                                position: relative;
+                                background-color: $primary-purple;
+                                content: '';
+                                display: inline-block;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    label {
+                        width: 100%;
+                        .optionInput {
+                            width: 100%;
+                            height: 40px;
+                            border: 2px solid $light-purple;
+                            border-radius: 5px;
+                            outline: none;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .form-btn {
+            width: 100%;
+            @include flex(row, flex-end, flex-start, nowrap);
+            .addBtn {
+                @include btn($primary-green);
+            }
+        }
+    }
+}

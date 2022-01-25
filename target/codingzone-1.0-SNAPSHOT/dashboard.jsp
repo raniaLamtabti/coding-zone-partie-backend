@@ -39,7 +39,7 @@
                     </a></li>
                 </li>
                 <li>
-                    <a href="#" class="sidebar-link">
+                    <a href="TestServlet" class="sidebar-link">
                         <img src="resources/icons/Add.svg" alt="Add">
                         <span class="sidebar-link-text">Add Test</span>
                     </a>
@@ -122,7 +122,6 @@
                     List<TestResult> testResults = (List<TestResult>) request.getAttribute("test");
                     for (int i = 0; i < testResults.size() && i < 10; i++) {
                 %>
-
                 <div class="test">
                     <h3 class="col"><%= testResults.get(i).getTestStudent().getStudent().getFirstName() %></h3>
                     <h3 class="col"><%= testResults.get(i).getTestStudent().getStudent().getLastName() %></h3>
@@ -133,10 +132,7 @@
                         <img src="resources/icons/send-2.svg" alt="view">
                     </div>
                 </div>
-
                 <% } %>
-
-
             </div>
 
         </div>

@@ -35,12 +35,11 @@ aside{
             height: 60px;
             padding-left: 35px;
             transition: 0.3s;
-
+            opacity: .2;
             span{
               transition: 0.3s;
-              color: $secondary-light-text-color;
+              color: $primary-purple;
               margin-left: 10px;
-
             }
 
           }

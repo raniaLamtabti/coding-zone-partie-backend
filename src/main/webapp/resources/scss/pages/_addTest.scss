@@ -1,0 +1,59 @@
+.container {
+    .testInfoAdd {
+        display: flex;
+        @include flex(row, center, center, nowrap);
+        height: 80vh;
+        form {
+            padding: 45px;
+            background-color: $white;
+            box-sizing: border-box;
+            border-radius: 20px;
+            width: 70%;
+            gap: 25px;
+            @include flex(column, center, center, nowrap);
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            .form-group {
+                @include flex(column, flex-start, flex-start, wrap);
+                gap: 10px;
+                .form-control {
+                    width: 400px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border-color: $light-purple;
+                    padding: 0px 10px;
+                    border-width: 2px;
+                }
+                .textarea {
+                    height: 200px;
+                    padding-top: 10px;
+                }
+                // select {
+                //     -webkit-appearance: none;
+                //     -moz-appearance: none;
+                //     appearance: none;
+                //     position: relative;
+                //     &::after {
+                //         content: "";
+                //         position: absolute;
+                //         right: 0;
+                //         top: 0;
+                //         background: url("../../icons/arrow-bottom.svg") no-repeat right white;
+                //         z-index: 1;
+                //         text-align: center;
+                //         width: 30px;
+                //         height: 30px;
+                //         pointer-events: none;
+                //         box-sizing: border-box;
+                //     }
+                // }
+            }
+            .form-btn {
+                width: 400px;
+                @include flex(row, flex-end, flex-start, nowrap);
+                .addBtn {
+                    @include btn($primary-green);
+                }
+            }
+        }
+    }
+}

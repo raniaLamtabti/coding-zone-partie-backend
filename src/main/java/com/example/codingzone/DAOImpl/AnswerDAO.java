@@ -27,7 +27,7 @@ public class AnswerDAO implements DAO<Answer> {
                 answer.setId(rs.getLong("id"));
                 answer.setContent(rs.getString("content"));
                 answer.setQuestion(DAOFactory.getQuestionDAO().find(rs.getLong("question_id")));
-                answer.setIsCorrect(String.valueOf(rs.getBoolean("is_correct")));
+                answer.setCorrect(Boolean.parseBoolean(String.valueOf(rs.getBoolean("is_correct"))));
                 return answer;
             }
         } catch (Exception e) {
@@ -47,7 +47,7 @@ public class AnswerDAO implements DAO<Answer> {
                 answer.setId(rs.getLong("id"));
                 answer.setContent(rs.getString("content"));
                 answer.setQuestion(DAOFactory.getQuestionDAO().find(rs.getLong("question_id")));
-                answer.setIsCorrect(String.valueOf(rs.getBoolean("is_correct")));
+                answer.setCorrect(Boolean.parseBoolean(String.valueOf(rs.getBoolean("is_correct"))));
                 answers.add(answer);
                  return answers;
             }
@@ -63,8 +63,8 @@ public class AnswerDAO implements DAO<Answer> {
             pstmt = Config.getInstance().getConnection().prepareStatement(Queries.insert("answer",4));
             pstmt.setLong(1, obj.getId());
             pstmt.setString(2, obj.getContent());
-            pstmt.setLong(3, obj.getQuestion().getId());
-            pstmt.setBoolean(4, Boolean.parseBoolean(obj.getIsCorrect()));
+            pstmt.setBoolean(3, obj.isCorrect());
+            pstmt.setLong(4, obj.getQuestion().getId());
             pstmt.executeUpdate();
             return obj;
 

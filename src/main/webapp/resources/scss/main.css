@@ -81,7 +81,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -566,7 +567,7 @@ body {
 }
 body main {
   height: 100vh;
-  width: calc(100% - 250px);
+  width: calc(100% - $sidebar-width);
   position: absolute;
   top: 0;
   right: 0;
@@ -748,7 +749,7 @@ body {
 }
 body main {
   height: 100vh;
-  width: calc(100% - 250px);
+  width: calc(100% - $sidebar-width);
   position: absolute;
   top: 0;
   right: 0;
@@ -1032,6 +1033,4 @@ body main .getAllTest_container .tests_table .tests .test .col:nth-child(6) {
   color: #FFFFFF;
   border: none;
   padding: 10px 25px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -39,7 +39,7 @@
                     </a></li>
                 </li>
                 <li>
-                    <a href="#" class="sidebar-link">
+                    <a href="TestServlet" class="sidebar-link">
                         <img src="resources/icons/Add.svg" alt="Add">
                         <span class="sidebar-link-text">Add Test</span>
                     </a>

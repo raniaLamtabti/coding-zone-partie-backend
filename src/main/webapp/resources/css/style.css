@@ -476,6 +476,7 @@ body {
   transition: 0.3s;
   border-left: solid 10px #4339F2;
   padding-left: 25px;
+  opacity: 100% !important;
 }
 
 aside {
@@ -527,10 +528,11 @@ aside .aside_container .menu ul li a {
   height: 60px;
   padding-left: 35px;
   transition: 0.3s;
+  opacity: 0.2;
 }
 aside .aside_container .menu ul li a span {
   transition: 0.3s;
-  color: #4339F234;
+  color: #4339F2;
   margin-left: 10px;
 }
 aside .logout {
@@ -833,6 +835,203 @@ body main .getAllTest_container .tests_table .tests .test h3:nth-child(5) {
 }
 body main .getAllTest_container .tests_table .tests .test .col:nth-child(6) {
   width: 5%;
+}
+
+.container .testInfoAdd {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 80vh;
+}
+.container .testInfoAdd form {
+  padding: 45px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 70%;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.container .testInfoAdd form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container .testInfoAdd form .form-group .form-control {
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgba(67, 57, 242, 0.2);
+  padding: 0px 10px;
+  border-width: 2px;
+}
+.container .testInfoAdd form .form-group .textarea {
+  height: 200px;
+  padding-top: 10px;
+}
+.container .testInfoAdd form .form-btn {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.container .testInfoAdd form .form-btn .addBtn {
+  background-color: #34B53A;
+  border-radius: 5px;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 25px;
+}
+
+.testQuestAdd form {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin: 25px 0;
+  width: 100%;
+  padding: 25px 100px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.testQuestAdd form .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.testQuestAdd form .top .form-group {
+  width: 100%;
+  height: 40px;
+  border: 2px solid rgba(67, 57, 242, 0.2);
+  border-radius: 5px;
+  position: relative;
+}
+.testQuestAdd form .top .form-group .form-control {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.testQuestAdd form .top .form-group label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #FFFFFF;
+  color: #4339F2;
+}
+.testQuestAdd form .top .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.testQuestAdd form .top .right .right-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 20px;
+}
+.testQuestAdd form .top .left {
+  width: 100%;
+  height: 95px;
+  padding-top: 10px;
+}
+.testQuestAdd form .bottom {
+  margin: 30px 0;
+}
+.testQuestAdd form .bottom .options {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.testQuestAdd form .bottom .options .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.testQuestAdd form .bottom .options .form-group .optionBtn {
+  height: 20px;
+  width: 20px;
+}
+.testQuestAdd form .bottom .options .form-group .optionBtn::after {
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #FFFFFF;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid rgba(67, 57, 242, 0.2);
+}
+.testQuestAdd form .bottom .options .form-group .optionBtn:checked:after {
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #4339F2;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+.testQuestAdd form .bottom .options .form-group label {
+  width: 100%;
+}
+.testQuestAdd form .bottom .options .form-group label .optionInput {
+  width: 100%;
+  height: 40px;
+  border: 2px solid rgba(67, 57, 242, 0.2);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+.testQuestAdd form .form-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.testQuestAdd form .form-btn .addBtn {
+  background-color: #34B53A;
+  border-radius: 5px;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,12 +16,12 @@ public class Answer {
     private String content;
     @Getter
     @Setter
-    private String isCorrect;
+    private boolean isCorrect;
     @Getter
     @Setter
     private Question question;
 
-    public Answer(String content, String isCorrect, Question question) {
+    public Answer(String content, boolean isCorrect, Question question) {
         this.id = UUID.randomUUID().getMostSignificantBits();
         this.content = content;
         this.isCorrect = isCorrect;

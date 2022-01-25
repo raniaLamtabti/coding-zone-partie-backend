@@ -53,13 +53,15 @@ public class TestDAO implements DAO<Test> {
     @Override
     public Test create(Test obj) {
         try {
-            pstmt = Config.getInstance().getConnection().prepareStatement(Queries.insert("test", 6));
-            pstmt.setLong(3, obj.getId());
-            pstmt.setString(1, obj.getName());
-            pstmt.setString(2, obj.getDescription());
+            pstmt = Config.getInstance().getConnection().prepareStatement(Queries.insert("test", 4));
+            pstmt.setLong(1, obj.getId());
+            pstmt.setString(2, obj.getName());
+            pstmt.setString(3, obj.getDescription());
             pstmt.setLong(4, obj.getCategory().getId());
-            pstmt.setDate(5, (Date) obj.getStartTime());
-            pstmt.setDate(6, (Date) obj.getEndTime());
+
+            pstmt.executeUpdate();
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
